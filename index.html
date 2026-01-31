@@ -1,354 +1,443 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <title>Ryan Verissimo | Desenvolvedor Full Stack</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
     />
-    <link
-      rel="shortcut icon"
-      href="./images/programming.png"
-      type="image/x-icon"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="menu.js" defer></script>
-    <title>Portfólio - RVO</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
-
   <body>
-    <header>
-      <div class="interface">
-        <div
-          class="logo"
-          data-aos="flip-up"
-          data-aos-delay="300"
-          data-aos-duration="1500"
-        >
-          <a href="#">
-            <img src="./images/logo.png" alt="Logotipo  fólio RVO" />
-          </a>
-        </div>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Ryan Verissimo</a>
 
-        <nav class="menu-desktop" data-aos="fade-down">
-          <ul>
-            <li><a href="#topo-do-site">Início</a></li>
-            <li><a href="#especialidades">Especialidades</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="#home" class="nav__link">Início</a></li>
+            <li><a href="#about" class="nav__link">Sobre</a></li>
+            <li><a href="#skills" class="nav__link">Habilidades</a></li>
+            <li><a href="#projects" class="nav__link">Projetos</a></li>
+            <li><a href="#contact" class="nav__link">Contato</a></li>
           </ul>
-        </nav>
 
-        <div class="btn-contato" data-aos="fade-down">
-          <a href="#formulario">
-            <button>Contato</button>
-          </a>
-        </div>
-        <!--btn-contato-->
-
-        <div class="btn-abrir-menu" id="btn-menu">
-          <i class="bi bi-list"></i>
-        </div>
-
-        <div class="menu-mobile" id="menu-mobile">
-          <div class="btn-fechar">
-            <i class="bi bi-x-lg"></i>
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-large-line"></i>
           </div>
-
-          <nav>
-            <ul>
-              <li><a href="#topo-do-site">Início</a></li>
-              <li><a href="#especialidades">Especialidades</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#projetos">Projetos</a></li>
-              <li><a href="#formulario">Contato</a></li>
-            </ul>
-          </nav>
         </div>
-        <!--menu-mobile-->
-        <div class="overlay-menu" id="overlay-menu"></div>
-      </div>
-      <!--Interface-->
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
+        </div>
+      </nav>
     </header>
 
-    <main>
-      <section id="topo-do-site" class="topo-do-site">
-        <div class="interface">
-          <div class="flex">
-            <div
-              class="txt-topo-site"
-              data-aos="zoom-out-right"
-              data-aos-delay="250"
-            >
-              <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
-              <p>
-                Imaginação e novidade caminham juntas. Com uma fusão singular de
-                design marcante, funcionalidade intuitiva e maximização para
-                resultados, estou preparado para elaborar a presença virtual dos
-                seus desejos.
+    <main class="main" id="main">
+      <!-- ================= HOME ======================== -->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content">
+            <div class="home__image">
+              <img src="assets/images/perfilbranco.png" alt="Foto de Perfil" />
+            </div>
+            <div class="home__social">
+              <a
+                href="https://www.linkedin.com/in/ryanverissimo/"
+                target="_blank"
+                class="home__link"
+              >
+                <i class="ri-linkedin-box-fill"></i>
+              </a>
+              <a
+                href="https://github.com/RyanVerissimo"
+                target="_blank"
+                class="home__link"
+              >
+                <i class="ri-github-fill"></i>
+              </a>
+              <a
+                href="https://wa.me/5585997794006?text=Ol%C3%A1%2C%20Ryan!"
+                target="_blank"
+                class="home__link"
+              >
+                <i class="ri-whatsapp-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="home__data grid">
+            <p class="home__title home__subtitle">
+              Olá, eu sou
+              <span id="home-typed"></span>
+            </p>
+
+            <p class="home__description">
+              Desenvolvedor Full Stack focado no desenvolvimento de aplicações
+              web modernas e funcionais.
+            </p>
+
+            <div class="home__buttons">
+              <a
+                href="assets/pdf/Curriculodev_RyanVerissimo.pdf"
+                download=""
+                target="_blank"
+                class="button"
+                >Download CV</a
+              >
+              <a href="#contact" class="button button__ghost">Contato</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ABOUT ======================== -->
+      <section class="about section" id="about">
+        <div class="about__container container grid">
+          <div class="about__content">
+            <div class="about__data">
+              <h2 class="section__title">Sobre Mim</h2>
+
+              <p class="about__description">
+                Sou um desenvolvedor e designer web especializado na criação de
+                sites modernos, funcionais e visualmente atraentes. Combino
+                criatividade e funcionalidade para transformar ideias em
+                interfaces intuitivas, equilibrando design, usabilidade e código
+                de qualidade. <br />
+                <br />
+                Minha jornada na programação começou há 3 anos, ainda na
+                faculdade, e desde então venho me dedicando ao aprimoramento
+                contínuo no desenvolvimento web. Ao longo desse período, tenho
+                aprofundado meus conhecimentos em Full Stack JavaScript,
+                buscando aplicar boas práticas, código limpo e atenção aos
+                detalhes para a criação de soluções eficientes e de qualidade.
               </p>
-              <div class="btn-contato">
-                <a href="#formulario">
-                  <button>Entre em contato</button>
+              <a href="#contact" class="button button__ghost">Contato </a>
+            </div>
+          </div>
+
+          <div class="about__image">
+            <img
+              class="about__img"
+              src="assets/images/perfilbranco-removebg-preview.png"
+              alt="Foto de Perfil"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SKILLS ======================== -->
+      <section class="skills section" id="skills">
+        <h2 class="section__title">Minhas Habilidades</h2>
+
+        <div class="skills__container container grid">
+          <!-- Frontend -->
+          <div class="skills__card">
+            <h3 class="skills__title">
+              <i class="ri-layout-4-line"></i>
+              Frontend
+            </h3>
+
+            <ul class="skills__list">
+              <li>HTML5 & CSS3</li>
+              <li>JavaScript (ES6+)</li>
+              <li>React.js</li>
+              <li>TypeScript</li>
+            </ul>
+          </div>
+
+          <!-- Backend -->
+          <div class="skills__card">
+            <h3 class="skills__title">
+              <i class="ri-server-line"></i>
+              Backend
+            </h3>
+
+            <ul class="skills__list">
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>TypeScript</li>
+              <li>API REST</li>
+              <li>Autenticação JWT</li>
+            </ul>
+          </div>
+
+          <!-- Banco de Dados -->
+          <div class="skills__card">
+            <h3 class="skills__title">
+              <i class="ri-database-2-line"></i>
+              Banco de Dados
+            </h3>
+
+            <ul class="skills__list">
+              <li>MySQL</li>
+              <li>Firebase</li>
+            </ul>
+          </div>
+
+          <!-- Outras -->
+          <div class="skills__card">
+            <h3 class="skills__title">
+              <i class="ri-tools-line"></i>
+              Outras
+            </h3>
+
+            <ul class="skills__list">
+              <li>Git & GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects">
+        <h2 class="section__title">Meus Projetos</h2>
+
+        <div class="projects__container container grid">
+          <!-- Projeto 1 -->
+          <article class="project__card">
+            <img
+              src="assets/images/projeto1.png"
+              alt="NexStock"
+              class="project__img"
+            />
+
+            <div class="project__content">
+              <h3 class="project__title">DevCurrency</h3>
+
+              <p class="project__description">
+                Aplicação desenvolvida para exibir informações de criptomoedas
+                em tempo real, consumindo dados de uma API pública. O projeto
+                foi construído com foco em boas práticas de organização,
+                roteamento e manipulação de dados.
+              </p>
+
+              <div class="project__tech">
+                <span>React.js</span>
+                <span>TypeScript</span>
+                <span>CSS</span>
+              </div>
+
+              <div class="project__links">
+                <a
+                  href="https://github.com/RyanVerissimo/DevCurrency"
+                  target="_blank"
+                >
+                  <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://dev-currency-nu.vercel.app/" target="_blank">
+                  <i class="ri-external-link-line"></i>
                 </a>
               </div>
             </div>
+          </article>
 
-            <div class="img-topo-site" data-aos="zoom-in" data-aos-delay="100">
-              <img
-                src="./images/RyanOliveira.png"
-                alt="Programador Ryan Oliveira"
-              />
-            </div>
-          </div>
-        </div>
-        <!--interface-->
-      </section>
-      <!--topo-do-site-->
+          <!-- Projeto 2 -->
+          <article class="project__card">
+            <img
+              src="assets/images/projeto2.png"
+              alt="Barbearia NG7"
+              class="project__img"
+            />
 
-      <section id="especialidades" class="especialidades">
-        <div class="interface">
-          <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
-          <div class="flex">
-            <div class="especialidades-box" data-aos="fade-up">
-              <ion-icon name="logo-html5"></ion-icon>
-              <h3>React.js</h3>
-            </div>
-            <!--especialidades-box-->
-            <div class="especialidades-box" data-aos="fade-up">
-              <ion-icon name="logo-css3"></ion-icon>
-              <h3>Node.js</h3>
-            </div>
-            <!--especialidades-box-->
-            <div class="especialidades-box" data-aos="fade-up">
-              <ion-icon name="logo-javascript"></ion-icon>
-              <h3>MySQL</h3>
-            </div>
-            <!--especialidades-box-->
-          </div>
-          <!--flex-->
-        </div>
-        <!--interface-->
-      </section>
-      <!--especialidades-->
+            <div class="project__content">
+              <h3 class="project__title">Dev_Reels</h3>
 
-      <section id="sobre" class="sobre">
-        <div class="interface">
-          <div class="flex">
-            <div class="img-sobre">
-              <img
-                src="./images/RyanOliveira.png"
-                alt="Programador Ryan Oliveira"
-                data-aos="flip-up"
-                data-aos-delay="100"
-                data-aos-duration="1000"
-              />
-            </div>
-            <!--img-sobre-->
-
-            <div
-              class="txt-sobre"
-              data-aos="zoom-out-left"
-              data-aos-delay="250"
-            >
-              <h2>MUITO PRAZER, <span>SOU RYAN OLIVEIRA.</span></h2>
-              <p>
-                Me chamo Ryan Verissimo de Oliveira, sou do Ceará, faço
-                faculdade de ciências da computação na Estácio Parangaba, e,
-                atualmente, estou iniciando na carreira de Desenvolvedor web,
-                Front-End.
+              <p class="project__description">
+                DEV REELS é uma plataforma de filmes desenvolvida a partir do
+                consumo da API do TMDB. O projeto permite listar filmes,
+                visualizar os detalhes de cada filme, salvar favoritos no
+                localStorage do navegador e gerenciar essa lista, adicionando ou
+                removendo conforme a preferência do usuário.
               </p>
-              <p>
-                A escolha do curso foi motivada pela minha imensa paixão em
-                mexer em computadores desde a infância. Quanto à decisão sobre o
-                caminho a seguir, tudo começou quando cursei a disciplina de
-                "Desenvolvimento Web" na faculdade. Esse momento foi o ponto de
-                partida para despertar minha curiosidade no vasto mundo da web.
-                Assim, hoje, busco constantemente aprimorar-me nesse mercado, em
-                busca de oportunidades.
-              </p>
-              <div class="btn-social">
+
+              <div class="project__tech">
+                <span>React.js</span>
+                <span>localStorage</span>
+                <span>CSS</span>
+              </div>
+
+              <div class="project__links">
                 <a
-                  title="github"
+                  href="https://github.com/RyanVerissimo/DEV_REELS"
                   target="_blank"
-                  href="https://github.com/RyanVerissimo"
-                  ><button><i class="bi bi-github"></i></button
-                ></a>
-                <a
-                  title="linkedin"
-                  target="_blank"
-                  href="https://www.linkedin.com/in/ryanverissimo/"
-                  ><button><i class="bi bi-linkedin"></i></button
-                ></a>
-                <a
-                  title="instagram"
-                  target="_blank"
-                  href="https://www.instagram.com/ryanveris/"
-                  ><button><i class="bi bi-instagram"></i></button
-                ></a>
+                >
+                  <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://dev-reels.vercel.app/" target="_blank">
+                  <i class="ri-external-link-line"></i>
+                </a>
               </div>
             </div>
-            <!--txt-sobre-->
-          </div>
-          <!--flex-->
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="project__card">
+            <img
+              src="assets/images/projeto3.png"
+              alt="Company House"
+              class="project__img"
+            />
+
+            <div class="project__content">
+              <h3 class="project__title">DevLinks</h3>
+
+              <p class="project__description">
+                DevLink é uma plataforma estilo Linktree. O sistema permite que
+                cada usuário cadastre e personalize seus próprios links, além de
+                gerenciar suas redes sociais de forma simples, prática e
+                totalmente responsiva.
+              </p>
+
+              <div class="project__tech">
+                <span>React.js</span>
+                <span>TypeScript</span>
+                <span>TailwindCSS</span>
+                <span>Firebase</span>
+              </div>
+
+              <div class="project__links">
+                <a
+                  href="https://github.com/RyanVerissimo/DevLink"
+                  target="_blank"
+                >
+                  <i class="ri-github-fill"></i>
+                </a>
+                <a
+                  href="https://dev-link-azure-two.vercel.app/"
+                  target="_blank"
+                >
+                  <i class="ri-external-link-line"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 4 -->
+          <article class="project__card">
+            <img
+              src="assets/images/projeto4.png"
+              alt="Company House"
+              class="project__img"
+            />
+
+            <div class="project__content">
+              <h3 class="project__title">Shadow of Gotham</h3>
+
+              <p class="project__description">
+                Sistema de controle de estoque que possui autenticação segura
+                com login e JWT, proteção de rotas e funcionalidades completas
+                de CRUD para usuários e recursos, garantindo gerenciamento
+                eficiente e acesso controlado às áreas do sistema.
+              </p>
+
+              <div class="project__tech">
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MySQL</span>
+                <span>JWT</span>
+              </div>
+
+              <div class="project__links">
+                <a
+                  href="https://github.com/RyanVerissimo/Shadow_of_Gotham"
+                  target="_blank"
+                >
+                  <i class="ri-github-fill"></i>
+                </a>
+                <a
+                  href="https://github.com/RyanVerissimo/Shadow_of_Gotham"
+                  target="_blank"
+                >
+                  <i class="ri-external-link-line"></i>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
-        <!--Interface-->
       </section>
-      <!--Sobre-->
 
-      <section id="projetos" class="projetos">
-        <div class="interface">
-          <h2 class="titulo">MEUS <span>PROJETOS.</span></h2>
-          <div class="flex">
-            <a
-              target="_blank"
-              href="https://ryanverissimo.github.io/Ryan-Jazz-School/"
-            >
-              <div
-                class="img-projetos"
-                style="background-image: url(./images/JazzSchool.png)"
-              >
-                <div class="overlay">Projeto 1</div>
-              </div>
-            </a>
-            <a
-              target="_blank"
-              href="https://ryanverissimo.github.io/Projeto-Blog/"
-            >
-              <div
-                class="img-projetos"
-                style="background-image: url(./images/BlogPessoal.png)"
-              >
-                <div class="overlay">Projeto 2</div>
-              </div>
-            </a>
+      <!-- ================= CONTACT ======================== -->
+      <section class="contact section" id="contact">
+        <div class="contact__container container grid">
+          <!-- Lado esquerdo -->
+          <div class="contact__content">
+            <h2 class="contact__title">Vamos Conversar</h2>
 
-            <a
-              target="_blank"
-              href="https://ryanverissimo.github.io/Projeto-Site-GTA-V/"
-            >
-              <div
-                class="img-projetos"
-                style="background-image: url(./images/layoutGTA.png)"
+            <p class="contact__description">
+              Se você tem interesse no meu trabalho ou ficou com alguma dúvida,
+              fique à vontade para entrar em contato comigo.
+            </p>
+
+            <p class="contact__description">
+              Podemos construir algo de valor juntos. Acredite no meu trabalho e
+              vamos conversar.
+            </p>
+
+            <div class="contact__social">
+              <a
+                href="https://github.com/RyanVerissimo"
+                class="contact__social-link"
               >
-                <div class="overlay">Projeto 3</div>
-              </div>
-            </a>
+                <i class="ri-github-fill"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ryanverissimo/"
+                class="contact__social-link"
+              >
+                <i class="ri-linkedin-box-fill"></i>
+              </a>
+              <a
+                href="https://wa.me/5585997794006?text=Ol%C3%A1%2C%20Ryan!"
+                class="contact__social-link"
+              >
+                <i class="ri-whatsapp-line"></i>
+              </a>
+            </div>
           </div>
-        </div>
-        <!--interface-->
-      </section>
-      <!--projetos-->
 
-      <section id="formulario" class="formulario">
-        <div class="interface">
-          <h2 class="titulo">FALA <span>COMIGO.</span></h2>
+          <!-- Lado direito -->
+          <div class="contact__info">
+            <h3 class="contact__subtitle">Entre em contato diretamente</h3>
 
-          <form
-            action="https://formsubmit.co/ryanvm.black@gmail.com"
-            method="POST"
-          >
-            <input
-              type="text"
-              name="nome"
-              id="nome"
-              placeholder="Seu nome completo:"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Seu e-mail:"
-              required
-            />
-            <input
-              type="number"
-              name="telefone"
-              id="telefone"
-              placeholder="Seu celular:"
-            />
-            <textarea
-              name="texto"
-              id="texto"
-              placeholder="Sua mensagem"
-              required
-            ></textarea>
-            <div class="btn-enviar"><input type="submit" value="ENVIAR" /></div>
-          </form>
+            <p class="contact__text">
+              Você pode me chamar por meio das redes sociais ao lado ou enviar
+              um e-mail para:
+            </p>
+
+            <a href="mailto:ryan.work.front@gmail.com" class="contact__email">
+              ryan.work.front@gmail.com
+            </a>
+
+            <p class="contact__text">
+              Vamos trabalhar juntos para desenvolver soluções eficientes,
+              escaláveis e alinhadas às necessidades do seu negócio.
+            </p>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="interface">
-        <div class="line-footer">
-          <div class="flex">
-            <div class="logo-footer">
-              <img src="./images/logo.png" alt="Logotipo Portfólio RVO" />
-            </div>
-
-            <div class="btn-social">
-              <a
-                title="github"
-                target="_blank"
-                href="https://github.com/RyanVerissimo"
-                ><button><i class="bi bi-github"></i></button
-              ></a>
-              <a
-                title="linkedin"
-                target="_blank"
-                href="https://www.linkedin.com/in/ryanverissimo/"
-                ><button><i class="bi bi-linkedin"></i></button
-              ></a>
-              <a
-                title="instagram"
-                target="_blank"
-                href="https://www.instagram.com/ryanveris/"
-                ><button><i class="bi bi-instagram"></i></button
-              ></a>
-            </div>
-          </div>
-          <!--flex-->
-        </div>
-        <!--line-footer-->
-
-        <div class="line-footer final-border">
-          <p>
-            <i class="bi bi-envelope-fill"></i>
-            <a href="mailto:ryan.work.front@gmail.com"
-              >ryan.work.front@gmail.com</a
-            >
-          </p>
-        </div>
-        <!--line-footer-->
+    <footer class="footer" id="footer">
+      <div class="footer__container container">
+        <span class="footer__copy">
+          © 2026 Ryan Verissimo. Todos os direitos reservados.
+        </span>
       </div>
-      <!--interface-->
     </footer>
 
-    <div class="btn-contato">
-      <a href="#" class="btn-voltar">
-        <button><i class="bi bi-arrow-up"></i></button>
-      </a>
-    </div>
+    <a
+      href="https://wa.me/5585997794006?text=Ol%C3%A1%2C%20Ryan!"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Fale comigo no WhatsApp"
+    >
+      <i class="ri-whatsapp-line"></i>
+    </a>
 
-    <script src="./script.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
